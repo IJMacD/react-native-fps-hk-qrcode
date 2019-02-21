@@ -1,0 +1,28 @@
+{
+  "name": "react-fps-hk-qrcode",
+  "version": "1.0.0",
+  "description": "React component for displaying a Hong Kong Fast Payment System QR Code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/invite-frey/fps-hk-qrcode.git"
+  },
+  "keywords": [
+    "React",
+    "FPS",
+    "Hong",
+    "Kong",
+    "Fast",
+    "Payment",
+    "System"
+  ],
+  "author": "Frey Mansikkaniemi/Ness Li",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/invite-frey/fps-hk-qrcode/issues"
+  },
+  "homepage": "https://github.com/invite-frey/fps-hk-qrcode#readme"
+}
