@@ -1,13 +1,13 @@
-require('./pad')
+const pad = require('./pad')
 
 function dataObj(id, value) {
-    var paddedLength = String(value.length).pad(2);
+    var paddedLength = pad(String(value.length),2);
     return String(id + paddedLength + value);
 }
 
 function emvEncode(obj) {
     var payloadFormatIndicator = dataObj("00", "01");
-    var pointOfInitiationMethod = dataObj("01", (obj.amount == "") ? "11" : "12");
+    var pointOfInitiationMethod = dataObj("01", (obj.amount === "") ? "11" : "12");
 
     var guid = dataObj("00", "hk.com.hkicl");
     var merchantAccountInformationTemplate = "";
@@ -22,6 +22,8 @@ function emvEncode(obj) {
         case "04":
             merchantAccountInformationTemplate = dataObj("01", obj.bank_code) + dataObj("04", obj.email.toUpperCase());
             break;
+        default:
+            return null;
     }
 
     var merchantAccountInformation = dataObj("26", guid + merchantAccountInformationTemplate);
@@ -30,9 +32,9 @@ function emvEncode(obj) {
     var countryCode = dataObj("58", "HK");
     var merchantName = dataObj("59", "NA");
     var merchantCity = dataObj("60", "HK");
-    var transactionAmount = (obj.amount == "") ? "" : dataObj("54", obj.amount);
-    var reference = (obj.reference == "") ? "" : dataObj("05", obj.reference);
-    var additionalDataTemplate = (reference == "") ? "" : dataObj("62", reference);
+    var transactionAmount = (obj.amount === "") ? "" : dataObj("54", obj.amount);
+    var reference = (obj.reference === "") ? "" : dataObj("05", obj.reference);
+    var additionalDataTemplate = (reference === "") ? "" : dataObj("62", reference);
 
     var msg = ""
     msg += payloadFormatIndicator;
