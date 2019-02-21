@@ -1,3 +1,5 @@
+require('./pad')
+
 function dataObj(id, value) {
     var paddedLength = String(value.length).pad(2);
     return String(id + paddedLength + value);
@@ -47,3 +49,5 @@ function emvEncode(obj) {
 
     return msg;
 }
+
+module.exports = emvEncode

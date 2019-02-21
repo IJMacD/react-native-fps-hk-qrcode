@@ -60,3 +60,5 @@ function crc16(s) {
 
     return ((crc ^ 0) & 0xFFFF);
 }
+
+module.exports = crc16;

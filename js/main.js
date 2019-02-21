@@ -34,7 +34,8 @@
         $(message).val(msg + crc);
         $(hash).val(crc);
         $("#qrcode").html("");
-        new QRCode(document.getElementById("qrcode"), msg + crc);
+        qrcodeDiv = <div></div>
+        new QRCode(qrcodeDiv, msg + crc);
 
         return false;
     });
