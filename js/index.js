@@ -5,16 +5,8 @@ const crc16 = require('./crc-16-ccitt')
 require('./pad')
 
 class FasterPaymentSystemQRCode extends Component {
-
-  constructor(props){
-    super(props)
-  }
-
-  
-
   render(){
     let qrcode = <div></div>
-
     const { bank_code, fps_id, mobile, email, mcc, currency, amount, reference } = this.props;
 
     let account = null
@@ -45,8 +37,6 @@ class FasterPaymentSystemQRCode extends Component {
       qrcode
     );
   }
-
-  
 };
 
 export default FasterPaymentSystemQRCode;
