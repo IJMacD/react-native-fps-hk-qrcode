@@ -6,7 +6,7 @@
 npm install react-fps-hk-qrcode
 ```
 
-###Usage
+### Usage
 
 Use in React App:
 
