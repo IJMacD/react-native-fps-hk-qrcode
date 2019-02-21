@@ -11,6 +11,9 @@ npm install react-fps-hk-qrcode
 Use in React App:
 
 ```
+import FasterPaymentSystemQRCode from "react-fps-hk-qrcode"
+...
+
 <FasterPaymentSystemQRCode account="04" bank_code="004" email="email@example.com" mcc="0000" currency="344" amount="2000" reference=""/>
 ```
 
@@ -31,8 +34,8 @@ The following properties can be set (all are strings):
 
 ## Authors
 
-Forked from [fps-hk-qrcode](https://github.com/nessgor/fps-hk-qrcode) by [nessgor](https://github.com/nessgor)
-React code by [Frey](invite-frey)
+* Forked from [fps-hk-qrcode](https://github.com/nessgor/fps-hk-qrcode) by [nessgor](https://github.com/nessgor)
+* React code by [Frey](invite-frey)
 
 ## License
 
