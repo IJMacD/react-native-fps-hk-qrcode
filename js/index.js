@@ -1,43 +1,53 @@
-import React from "react";
-const QRCode = require('./qrcode.min.js')
-const emvCode = require('./emv-code') 
+import React,{Component} from "react";
+import ReactDOM from "react-dom";
+var QRCode = require('qrcode-react');
+const emvEncode = require('./emv-code') 
 const crc16 = require('./crc-16-ccitt')
 require('./pad')
 
-const FasterPaymentSystemQRCode = props => {
-  let qrcode = <div></div>
+class FasterPaymentSystemQRCode extends Component {
 
-  const { bank_code, fps_id, mobile, email, mcc, currency, amount, message, reference } = props;
-
-  let account = null
-
-  if(fps_id) { account = "02" }
-  if(mobile) { account = "03" }
-  if(email)  { account = "04" }
-
-  if( account ){
-    const msg = emvEncode({
-      "account": account,
-      "bank_code": bank_code,
-      "fps_id": fps_id,
-      "mobile": mobile,
-      "email": email,
-      "mcc": mcc,
-      "currency": currency,
-      "amount": amount,
-      "reference": reference
-    });
-
-    const crc = crc16(msg).toString(16).pad(4).toUpperCase();
-
-    new QRCode(qrcode, msg + crc)
+  constructor(props){
+    super(props)
   }
 
-  return (
-    <div>
-      {qrcode}
-    </div>
-  );
+  
+
+  render(){
+    let qrcode = <div></div>
+
+    const { bank_code, fps_id, mobile, email, mcc, currency, amount, reference } = this.props;
+
+    let account = null
+
+    if(fps_id) { account = "02" }
+    if(mobile) { account = "03" }
+    if(email)  { account = "04" }
+
+    if( account ){
+      const msg = emvEncode({
+        "account": account,
+        "bank_code": bank_code,
+        "fps_id": fps_id,
+        "mobile": mobile,
+        "email": email,
+        "mcc": mcc,
+        "currency": currency,
+        "amount": amount,
+        "reference": reference
+      });
+
+      const crc = crc16(msg).toString(16).pad(4).toUpperCase();
+      qrcode = <QRCode value={msg+crc}/>
+
+    }
+    
+    return (
+      qrcode
+    );
+  }
+
+  
 };
 
 export default FasterPaymentSystemQRCode;

@@ -46,11 +46,11 @@ var crcTable = [0x0000, 0x1021, 0x2042, 0x3063, 0x4084, 0x50a5,
 ];
 
 function crc16(s) {
-    var crc = 0xFFFF;
-    var j, i;
+    let crc = 0xFFFF;
+    let j, i;
 
     for (i = 0; i < s.length; i++) {
-        c = s.charCodeAt(i);
+        let c = s.charCodeAt(i);
         if (c > 255) {
             throw new RangeError();
         }
