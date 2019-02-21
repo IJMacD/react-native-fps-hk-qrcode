@@ -28,7 +28,8 @@
     "homepage": "https://github.com/invite-frey/fps-hk-qrcode#readme",
     "dependencies": {
         "react": "^16.4.0",
-        "webpack": "^4.12.0"
+        "webpack": "^4.12.0",
+        "qrcode-react": "^0.1.16"
     },
     "devDependencies": {
         "babel-cli": "^6.26.0",
