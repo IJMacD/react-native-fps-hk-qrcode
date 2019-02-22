@@ -28,6 +28,7 @@ class FasterPaymentSystemQRCode extends Component {
       });
 
       if( msg ){
+
         const crc = pad(crc16(msg).toString(16),4).toUpperCase();
         qrcode = <QRCode value={msg+crc}/>
       }

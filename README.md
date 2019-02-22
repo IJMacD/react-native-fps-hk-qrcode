@@ -23,8 +23,8 @@ The following properties can be set (all are strings):
 * fps_id: The recipient FPS id
 * mobile: The recipient mobile number if used as FPS id
 * email: The recipient email if used as FPS id
-* mcc: Merchant Category Code (default: 0000)
-* currency: The FPS currency code (default HKD: 344)
+* mcc: Merchant Category Code as defined by ISO 18245 (default: 0000)
+* currency: The FPS currency code as defined by ISO 4217 (default HKD: 344)
 * amount: Transaction amount
 * reference: A payment reference code (not required)
 
