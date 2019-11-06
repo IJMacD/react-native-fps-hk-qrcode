@@ -1,6 +1,6 @@
 {
     "name": "react-fps-hk-qrcode",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "React component for displaying a Hong Kong Fast Payment System QR Code",
     "main": "build/index.js",
     "scripts": {
