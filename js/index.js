@@ -1,5 +1,5 @@
 import React,{Component} from "react";
-var QRCode = require('qrcode-react');
+var QRCode = require('qrcode.react');
 const emvEncode = require('./emv-code') 
 const crc16 = require('./crc-16-ccitt')
 const pad = require('./pad')
