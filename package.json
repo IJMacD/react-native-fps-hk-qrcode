@@ -1,18 +1,19 @@
 {
-    "name": "react-fps-hk-qrcode",
+    "name": "react-native-fps-hk-qrcode",
     "version": "1.0.7",
-    "description": "React component for displaying a Hong Kong Fast Payment System QR Code",
-    "main": "build/index.js",
+    "description": "React Native component for displaying a Hong Kong Fast Payment System QR Code",
+    "main": "js/index.js",
     "scripts": {
         "start": "webpack --watch --mode development",
         "build": "webpack --mode production"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/invite-frey/fps-hk-qrcode.git"
+        "url": "git+https://github.com/ijmacd/react-native-fps-hk-qrcode.git"
     },
     "keywords": [
         "React",
+        "React Native",
         "FPS",
         "Hong",
         "Kong",
@@ -20,25 +21,18 @@
         "Payment",
         "System"
     ],
-    "author": "Frey Mansikkaniemi/Ness Li",
+    "author": "Iain MacDonald/Frey Mansikkaniemi/Ness Li",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/invite-frey/fps-hk-qrcode/issues"
+        "url": "https://github.com/ijmacd/react-native-fps-hk-qrcode/issues"
     },
-    "homepage": "https://github.com/invite-frey/fps-hk-qrcode#readme",
+    "homepage": "https://github.com/ijmacd/react-native-fps-hk-qrcode#readme",
+    "peerDependencies": {
+        "react": "^16.9.0 || ^17.0",
+        "react-native": ">0.60",
+        "react-native-webview": "^9.0.1"
+    },
     "dependencies": {
-        "react": "^15.5.0",
-        "react-dom": "^15.5.0",
-        "qrcode.react": "^0.9.3"
-    },
-    "devDependencies": {
-        "babel-cli": "^6.26.0",
-        "babel-core": "^6.26.3",
-        "babel-loader": "^7.1.4",
-        "babel-plugin-transform-object-rest-spread": "^6.26.0",
-        "babel-plugin-transform-react-jsx": "^6.24.1",
-        "babel-preset-env": "^1.7.0",
-        "webpack-cli": "^3.0.4",
-        "webpack": "^4.12.0"
+        "react-native-qrcode-generator": "^1.2.2"
     }
 }

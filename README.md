@@ -1,17 +1,17 @@
-# Hong Kong Faster Payment System (FPS) QR Code React Component
+# Hong Kong Faster Payment System (FPS) QR Code React Native Component
 
 ### Installing
 
 ```
-npm install react-fps-hk-qrcode
+npx install-peerdeps react-native-fps-hk-qrcode
 ```
 
 ### Usage
 
-Use in React App:
+Use in React Native App:
 
 ```
-import FasterPaymentSystemQRCode from "react-fps-hk-qrcode"
+import FasterPaymentSystemQRCode from "react-native-fps-hk-qrcode"
 ...
 
 <FasterPaymentSystemQRCode account="04" bank_code="004" email="email@example.com" mcc="0000" currency="344" amount="2000" reference=""/>
@@ -34,8 +34,10 @@ The following properties can be set (all are strings):
 
 ## Authors
 
+* Forked from [fps-hk-qrcode](https://github.com/invite-frey/fps-hk-qrcode) by [invite-frey](https://github.com/invite-frey)
 * Forked from [fps-hk-qrcode](https://github.com/nessgor/fps-hk-qrcode) by [nessgor](https://github.com/nessgor)
 * React code by [Frey](invite-frey)
+* React Native code by [IJMacD](ijmacd)
 
 ## License
 
