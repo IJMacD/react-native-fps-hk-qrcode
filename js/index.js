@@ -12,8 +12,8 @@ class FasterPaymentSystemQRCode extends Component {
     let account = null
 
     if(fps_id) { account = "02" }
-    if(mobile&&bank_code) { account = "03" }
-    if(email&&bank_code)  { account = "04" }
+    if(mobile) { account = "03" }
+    if(email)  { account = "04" }
 
     if( account ){
       const msg = emvEncode({

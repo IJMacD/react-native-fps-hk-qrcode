@@ -1,6 +1,6 @@
 {
     "name": "react-native-fps-hk-qrcode",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "React Native component for displaying a Hong Kong Fast Payment System QR Code",
     "main": "js/index.js",
     "scripts": {
